@@ -16,7 +16,7 @@ class ExampleTemplate extends BaseTemplate {
 				// User profile links
 				Html::rawElement(
 					'div',
-					[ 'id' => 'user-tools', 'style' => 'color:#fff;' ],
+					[ 'style' => 'color:#fff;' ],
 					$this->getUserLinks()
 				) 
 			) .
