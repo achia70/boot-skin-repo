@@ -12,15 +12,15 @@ class ExampleTemplate extends BaseTemplate {
 		$html = '';
 		$html .= $this->get( 'headelement' );
 
-		$html .= Html::rawElement( 'div', [ 'class' => 'navbar navbar-expand-lg navbar-light bg-dark' ],
+		$html .= Html::rawElement( 'div', [ 'class' => 'navbar navbar-expand-lg navbar-dark bg-dark' ],
 				// User profile links
 				Html::rawElement(
 					'div',
-					[ 'id' => 'user-tools' ],
+					[ 'id' => 'user-tools', 'style' => 'color:#fff;' ],
 					$this->getUserLinks()
 				) 
 			) .
-			Html::rawElement( 'div', [ 'id' => 'mw-navigation', 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
+			Html::rawElement( 'div', [ 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
 				$this->getLogo() .
 				// Site navigation/sidebar
 				Html::rawElement(
