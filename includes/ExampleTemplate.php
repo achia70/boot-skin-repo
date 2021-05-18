@@ -30,12 +30,6 @@ class ExampleTemplate extends BaseTemplate {
 					[ 'id' => 'user-tools' ],
 					$this->getUserLinks()
 				) .
-				// Page editing and tools
-				Html::rawElement(
-					'div',
-					[ 'id' => 'page-tools' ],
-					$this->getPageLinks()
-				) .
 				// Site navigation/sidebar
 				Html::rawElement(
 					'div',
@@ -54,6 +48,12 @@ class ExampleTemplate extends BaseTemplate {
 						'lang' => $this->get( 'pageLanguage' )
 					],
 					$this->get( 'title' )
+				) .
+				// Page editing and tools
+				Html::rawElement(
+					'div',
+					[ 'id' => 'page-tools' ],
+					$this->getPageLinks()
 				) .
 				Html::rawElement( 'div', [ 'id' => 'siteSub' ],
 					$this->getMsg( 'tagline' )->parse()
