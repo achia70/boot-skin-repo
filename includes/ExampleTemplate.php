@@ -13,6 +13,33 @@ class ExampleTemplate extends BaseTemplate {
 		$html .= $this->get( 'headelement' );
 
 		$html .= Html::rawElement( 'div', [ 'class' => 'container', 'id' => 'mw-wrapper' ],
+			Html::rawElement( 'div', [ 'id' => 'mw-navigation' ],
+				Html::rawElement(
+					'h2',
+					[],
+					$this->getMsg( 'navigation-heading' )->parse()
+				) .
+				$this->getLogo() .
+				$this->getSearch() .
+				// User profile links
+				Html::rawElement(
+					'div',
+					[ 'id' => 'user-tools' ],
+					$this->getUserLinks()
+				) .
+				// Page editing and tools
+				Html::rawElement(
+					'div',
+					[ 'id' => 'page-tools' ],
+					$this->getPageLinks()
+				) .
+				// Site navigation/sidebar
+				Html::rawElement(
+					'div',
+					[ 'id' => 'site-navigation' ],
+					$this->getSiteNavigation()
+				)
+			) .
 			Html::rawElement( 'div', [ 'class' => 'mw-body', 'id' => 'content', 'role' => 'main' ],
 				$this->getSiteNotice() .
 				$this->getNewTalk() .
@@ -45,33 +72,6 @@ class ExampleTemplate extends BaseTemplate {
 				) .
 				$this->getDataAfterContent() .
 				$this->get( 'debughtml' )
-			) .
-			Html::rawElement( 'div', [ 'id' => 'mw-navigation' ],
-				Html::rawElement(
-					'h2',
-					[],
-					$this->getMsg( 'navigation-heading' )->parse()
-				) .
-				$this->getLogo() .
-				$this->getSearch() .
-				// User profile links
-				Html::rawElement(
-					'div',
-					[ 'id' => 'user-tools' ],
-					$this->getUserLinks()
-				) .
-				// Page editing and tools
-				Html::rawElement(
-					'div',
-					[ 'id' => 'page-tools' ],
-					$this->getPageLinks()
-				) .
-				// Site navigation/sidebar
-				Html::rawElement(
-					'div',
-					[ 'id' => 'site-navigation' ],
-					$this->getSiteNavigation()
-				)
 			) .
 			$this->getFooterBlock()
 		);
