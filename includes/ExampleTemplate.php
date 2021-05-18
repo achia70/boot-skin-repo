@@ -21,7 +21,7 @@ class ExampleTemplate extends BaseTemplate {
 				// Site navigation/sidebar
 				Html::rawElement(
 					'div',
-					[ 'id' => 'site-navigation' ],
+					[ 'id' => 'site-navigation navbarSupportedContent' 'class' => 'collapse navbar-collapse' ],
 					$this->getSiteNavigation()
 				) .
 				Html::rawElement(
