@@ -13,7 +13,7 @@ class ExampleTemplate extends BaseTemplate {
 		$html .= $this->get( 'headelement' );
 
 		$html .= Html::rawElement( 'div', [ 'class' => 'container', 'id' => 'mw-wrapper' ],
-			Html::rawElement( 'div', [ 'id' => 'mw-navigation' ],
+			Html::rawElement( 'div', [ 'id' => 'mw-navigation', 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
 				Html::rawElement(
 					'h2',
 					[],
