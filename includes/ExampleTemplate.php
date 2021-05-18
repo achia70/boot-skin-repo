@@ -44,7 +44,7 @@ class ExampleTemplate extends BaseTemplate {
 						'div',
 						[ 'class' => 'card-body' ],
 						$this->getSiteNotice()
-					) .
+					) 
 				) .
 				$this->getNewTalk() .
 				$this->getIndicators() .
