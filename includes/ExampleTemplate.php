@@ -22,7 +22,7 @@ class ExampleTemplate extends BaseTemplate {
 				Html::rawElement(
 					'div',
 					[ 'class' => 'form-inline my-2 my-lg-0' ],
-					$this->getSearch() .
+					$this->getSearch()
 				) .
 				// User profile links
 				Html::rawElement(
