@@ -18,7 +18,7 @@ class ExampleTemplate extends BaseTemplate {
 					'div',
 					[ 'id' => 'user-tools' ],
 					$this->getUserLinks()
-				) .
+				) 
 			) .
 			Html::rawElement( 'div', [ 'id' => 'mw-navigation', 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
 				$this->getLogo() .
@@ -32,7 +32,7 @@ class ExampleTemplate extends BaseTemplate {
 					'div',
 					[ 'class' => 'form-inline my-2 my-lg-0' ],
 					$this->getSearch()
-				) .
+				) 
 			) .
 			Html::rawElement( 'div', [ 'class' => 'container', 'id' => 'mw-wrapper' ],
 			Html::rawElement( 'div', [ 'class' => 'mw-body', 'id' => 'content', 'role' => 'main' ],
