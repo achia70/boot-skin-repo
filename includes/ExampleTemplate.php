@@ -19,10 +19,17 @@ class ExampleTemplate extends BaseTemplate {
 			Html::rawElement( 'div', [ 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
 				$this->getLogo() .
 				// Site navigation/sidebar
-				Html::rawElement( 'div', [ 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
-					'div',
-					[ 'id' => 'site-navigation navbarSupportedContent', 'class' => 'collapse navbar-collapse', ],
-					$this->getSiteNavigation()
+				Html::rawElement( 'div', [ 'class' => 'dropdown' ],
+					Html::rawElement(
+						'button',
+						[ 'id' => 'dropdownMenuButton', 'class' => 'btn btn-secondary dropdown-toggle', 'type' => 'button', 'data-toggle' => 'dropdown', 'aria-haspopup' => 'true', 'aria-expanded' => 'false' ],
+						'Navigation'
+					) .
+					Html::rawElement(
+						'div',
+						[ 'aria-labelledby' => 'dropdownMenuButton', 'class' => 'dropdown-menu', ],
+						$this->getSiteNavigation()
+					)
 				) .
 				Html::rawElement(
 					'div',
