@@ -39,7 +39,13 @@ class ExampleTemplate extends BaseTemplate {
 			) .
 			Html::rawElement( 'div', [ 'class' => 'container', 'id' => 'mw-wrapper' ],
 			Html::rawElement( 'div', [ 'class' => 'mw-body', 'id' => 'content', 'role' => 'main' ],
-				$this->getSiteNotice() .
+				Html::rawElement( 'div', [ 'class' => 'card' ],
+					Html::rawElement(
+						'div',
+						[ 'class' => 'card-body' ],
+						$this->getSiteNotice()
+					) .
+				) .
 				$this->getNewTalk() .
 				$this->getIndicators() .
 				Html::rawElement( 'h1',
