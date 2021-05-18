@@ -14,7 +14,7 @@ class ExampleTemplate extends BaseTemplate {
 
 		$html .= Html::rawElement( 'div', [ 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
 				// User profile links
-				$this->getUserLinks() .
+				$this->getUserLinks()
 			) .
 			Html::rawElement( 'div', [ 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
 				$this->getLogo() .
