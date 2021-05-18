@@ -12,8 +12,7 @@ class ExampleTemplate extends BaseTemplate {
 		$html = '';
 		$html .= $this->get( 'headelement' );
 
-		$html .= Html::rawElement( 'div', [ 'class' => 'container', 'id' => 'mw-wrapper' ],
-			Html::rawElement( 'div', [ 'id' => 'mw-navigation', 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
+		$html .= Html::rawElement( 'div', [ 'id' => 'mw-navigation', 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
 				/** Html::rawElement(
 					'h2',
 					[],
@@ -40,6 +39,7 @@ class ExampleTemplate extends BaseTemplate {
 					$this->getSiteNavigation()
 				)
 			) .
+			Html::rawElement( 'div', [ 'class' => 'container', 'id' => 'mw-wrapper' ],
 			Html::rawElement( 'div', [ 'class' => 'mw-body', 'id' => 'content', 'role' => 'main' ],
 				$this->getSiteNotice() .
 				$this->getNewTalk() .
