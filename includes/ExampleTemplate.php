@@ -12,30 +12,27 @@ class ExampleTemplate extends BaseTemplate {
 		$html = '';
 		$html .= $this->get( 'headelement' );
 
-		$html .= Html::rawElement( 'div', [ 'id' => 'mw-navigation', 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
-				/** Html::rawElement(
-					'h2',
-					[],
-					$this->getMsg( 'navigation-heading' )->parse()
-				) . **/
-				$this->getLogo() .
-				Html::rawElement(
-					'div',
-					[ 'class' => 'form-inline my-2 my-lg-0' ],
-					$this->getSearch()
-				) .
+		$html .= Html::rawElement( 'div', [ 'class' => 'navbar navbar-expand-lg navbar-light bg-dark' ],
 				// User profile links
 				Html::rawElement(
 					'div',
 					[ 'id' => 'user-tools' ],
 					$this->getUserLinks()
 				) .
+			) .
+			Html::rawElement( 'div', [ 'id' => 'mw-navigation', 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
+				$this->getLogo() .
 				// Site navigation/sidebar
 				Html::rawElement(
 					'div',
 					[ 'id' => 'site-navigation' ],
 					$this->getSiteNavigation()
-				)
+				) .
+				Html::rawElement(
+					'div',
+					[ 'class' => 'form-inline my-2 my-lg-0' ],
+					$this->getSearch()
+				) .
 			) .
 			Html::rawElement( 'div', [ 'class' => 'container', 'id' => 'mw-wrapper' ],
 			Html::rawElement( 'div', [ 'class' => 'mw-body', 'id' => 'content', 'role' => 'main' ],
