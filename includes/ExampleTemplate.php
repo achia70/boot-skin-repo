@@ -12,7 +12,7 @@ class ExampleTemplate extends BaseTemplate {
 		$html = '';
 		$html .= $this->get( 'headelement' );
 
-		$html .= Html::rawElement( 'div', [ 'id' => 'mw-wrapper' ],
+		$html .= Html::rawElement( 'div', [ 'class' => 'container', 'id' => 'mw-wrapper' ],
 			Html::rawElement( 'div', [ 'class' => 'mw-body', 'id' => 'content', 'role' => 'main' ],
 				$this->getSiteNotice() .
 				$this->getNewTalk() .
