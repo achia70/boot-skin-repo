@@ -19,9 +19,9 @@ class ExampleTemplate extends BaseTemplate {
 			Html::rawElement( 'div', [ 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
 				$this->getLogo() .
 				// Site navigation/sidebar
-				Html::rawElement(
+				Html::rawElement( 'div', [ 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
 					'div',
-					[ 'id' => 'site-navigation navbarSupportedContent', 'class' => 'collapse navbar-collapse', 'style' => 'list-style-image:none;display:inline;' ],
+					[ 'id' => 'site-navigation navbarSupportedContent', 'class' => 'collapse navbar-collapse', ],
 					$this->getSiteNavigation()
 				) .
 				Html::rawElement(
