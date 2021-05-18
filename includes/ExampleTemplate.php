@@ -19,7 +19,11 @@ class ExampleTemplate extends BaseTemplate {
 					$this->getMsg( 'navigation-heading' )->parse()
 				) . **/
 				$this->getLogo() .
-				$this->getSearch() .
+				Html::rawElement(
+					'div',
+					[ 'class' => 'form-inline my-2 my-lg-0' ],
+					$this->getSearch() .
+				) .
 				// User profile links
 				Html::rawElement(
 					'div',
