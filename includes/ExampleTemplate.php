@@ -11,8 +11,6 @@ class ExampleTemplate extends BaseTemplate {
 	public function execute() {
 		$html = '';
 		$html .= $this->get( 'headelement' );
-		
-		$out->addModuleStyles( 'ext.bootstrap.styles' );
 
 		$html .= Html::rawElement( 'div', [ 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
 				// User profile links
@@ -89,7 +87,6 @@ class ExampleTemplate extends BaseTemplate {
 		);
 
 		$html .= $this->getTrail();
-		$out->addModuleStyles( 'ext.bootstrap.styles' );
 		$html .= Html::closeElement( 'body' );
 		$html .= Html::closeElement( 'html' );
 
