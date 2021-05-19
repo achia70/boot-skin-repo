@@ -13,8 +13,6 @@ class ExampleTemplate extends BaseTemplate {
 		$html .= $this->get( 'headelement' );
 		
 		$html .= $out->addModuleStyles( 'ext.bootstrap.styles' );
-		
-		addAllBootstrapModules()
 
 		$html .= Html::rawElement( 'div', [ 'class' => 'navbar navbar-expand-lg navbar-light bg-light' ],
 				// User profile links
